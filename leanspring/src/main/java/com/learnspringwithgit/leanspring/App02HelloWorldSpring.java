@@ -11,6 +11,7 @@ public class App02HelloWorldSpring {
 	//And we will get that beat by getBean method and will print it;
 		var context = new AnnotationConfigApplicationContext(HelloWorldConfiguration.class);
 		System.out.println(context.getBean("name"));
+		System.out.println(context.getBean("person"));
 	}
-
+   
 }
