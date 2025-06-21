@@ -17,4 +17,13 @@ public class HelloWorldConfiguration {
       public Person person() {
     	  return new Person("Rupesh" , 22);
       } 
+       @Bean
+       public int age() {
+    	   return 22;
+       }
+       @Bean(name="Total Marks") // for rename purpose now to retrieve bean by name we have to use "Total marks instead of "marks";
+       public int marks() {
+    	  return 25;
+       }
+       
 }
