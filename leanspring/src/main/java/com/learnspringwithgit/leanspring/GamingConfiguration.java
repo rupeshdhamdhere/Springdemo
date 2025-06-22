@@ -10,7 +10,7 @@ public class GamingConfiguration {
      
 	@Bean
 	public GamingConsole game() {
-		var game = new PackManGame();
+		var game = new MarioGame();
 		return game;
 	}
 	@Bean
