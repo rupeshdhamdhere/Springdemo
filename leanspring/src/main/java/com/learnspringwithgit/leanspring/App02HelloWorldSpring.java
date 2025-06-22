@@ -19,6 +19,8 @@ public class App02HelloWorldSpring {
 		System.out.println(context.getBean("person2"));
 		System.out.println(context.getBean("person3callbyparameters"));
 		Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println); // to get list of all beans created and managed by java for that we  use loop
+		// to get the total of bean count use following 
+		System.out.println(context.getBeanDefinitionCount());
 	}
    
 }
