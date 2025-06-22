@@ -21,6 +21,9 @@ public class App02HelloWorldSpring {
 		Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println); // to get list of all beans created and managed by java for that we  use loop
 		// to get the total of bean count use following 
 		System.out.println(context.getBeanDefinitionCount());
+		System.out.println(context.getBean(Address.class)); //this gives output instead of error because we made one address as primary
+		System.out.println(context.getBean("person4callbyparameters")); //now it autowired and shows address from @qualifier
+		
 	}
    
 }
