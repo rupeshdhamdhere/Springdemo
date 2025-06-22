@@ -2,7 +2,7 @@ package com.learnspringwithgit.leanspring;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Bean;
-
+//this is comment from github
 @Configuration
 // record Person(String name, int age) {}; Before adding address term to add address use following aloso change in bean where type is Person
 record Person (String name,int age , Address address) {};
