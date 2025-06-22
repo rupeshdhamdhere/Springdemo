@@ -1,4 +1,4 @@
-package com.learnspringwithgit.leanspring;
+package com.learnspringwithgit.leanspring.helloworld;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;

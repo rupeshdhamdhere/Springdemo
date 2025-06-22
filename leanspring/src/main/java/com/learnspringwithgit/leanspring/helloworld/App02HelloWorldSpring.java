@@ -1,4 +1,4 @@
-package com.learnspringwithgit.leanspring;
+package com.learnspringwithgit.leanspring.helloworld;
 
 import java.util.Arrays;
 
@@ -11,7 +11,9 @@ public class App02HelloWorldSpring {
 	// we will use annotation config application context class for that and will fetch the bean created in the configuration file
 	// as follows
 	//And we will get that beat by getBean method and will print it;
-		var context = new AnnotationConfigApplicationContext(HelloWorldConfiguration.class);
+		// to remove the error resouece leak contex never closed use try method
+		try(
+		var context = new AnnotationConfigApplicationContext(HelloWorldConfiguration.class)){
 		System.out.println(context.getBean(String.class));
 		System.out.println(context.getBean("person"));
 		System.out.println(context.getBean("age"));
@@ -22,7 +24,7 @@ public class App02HelloWorldSpring {
 		// to get the total of bean count use following 
 		System.out.println(context.getBeanDefinitionCount());
 		System.out.println(context.getBean(Address.class)); //this gives output instead of error because we made one address as primary
-		System.out.println(context.getBean("person4callbyparameters")); //now it autowired and shows address from @qualifier
+		System.out.println(context.getBean("person4callbyparameters"));} //now it autowired and shows address from @qualifier
 		
 	}
    
