@@ -1,5 +1,7 @@
 package com.learnspringwithgit.leanspring;
 
+import java.util.Arrays;
+
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class App02HelloWorldSpring {
@@ -16,6 +18,7 @@ public class App02HelloWorldSpring {
 		System.out.println(context.getBean("address2"));
 		System.out.println(context.getBean("person2"));
 		System.out.println(context.getBean("person3callbyparameters"));
+		Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println); // to get list of all beans created and managed by java for that we  use loop
 	}
    
 }
